@@ -9,10 +9,13 @@ void trianguloInfDer(int n, char c);
 void trianguloCent(int n, char c);
 void trianguloCentInv(int n, char c);
 void rombo(int n, char c);
+void escalera(int n, char c);
+void cruz(int n, char c);
+void flecha(int n, char c);
 
 int n, fig;
 char c;
-const char menu[8][35] =
+const char menu[12][35] =
 {
 	"Linea",
 	"Cuadrado",
@@ -21,8 +24,13 @@ const char menu[8][35] =
 	"Triangulo Inferior Izquierdo",
 	"Triangulo Inferior Derecho",
 	"Triangulo Centrado",
-	"Triangulo Centrado Invertido"
+	"Triangulo Centrado Invertido",
+	"Rombo",
+	"Escalera",
+	"Cruz",
+	"Flecha"
 }; 
+
 int main()
 { 
 	n = leerEntero("Dame el tamaño de la figura: ");
@@ -60,6 +68,15 @@ int main()
 		break;
 	case 9:
 		rombo(n, c);
+		break;
+	case 10:
+		escalera(n, c);
+		break;
+	case 11:
+		cruz(n, c);
+		break;
+	case 12:
+		flecha(n, c);
 		break;
 	default:
 		printf("Opcion no valida");
@@ -149,8 +166,79 @@ void rombo(int n, char c)
 	int aux = 0, inc = 1;
 	for (int i = 0; i < n * 2; i++, aux += inc)
 	{
+		if (n - aux == 0)
+		{
+			inc = -1;
+			aux--;
+		}
 		linea(n - aux, c);
-		linea(aux, ' ');
+		linea(aux * 2, ' ');
+		linea(n - aux, c);
+		printf("\n");
 	}
 }
 
+void escalera(int n, char c)
+{
+	int relleno = n - 2;
+	linea(n, c);
+	printf("\n");
+	for (int i = 1; i <= (n * n - (n - 1)) - 2; i++)
+	{
+		linea(1, c);
+		linea(relleno, ' ');
+		if (i % (n - 1) == 0)
+		{
+			linea(n, c);
+			relleno += (n - 1);
+		}
+		else {
+			linea(1, c);
+		}
+		printf("\n"); 
+	}
+	linea((n * n - (n - 1)), c);
+}
+
+void cruz(int n, char c)
+{
+	for (int i = 0; i < n * 4; i++)
+	{
+		if (i >= n && i < n * 2)
+		{
+			linea(n * 3, c);
+		}
+		else {
+			linea(n, ' ');
+			linea(n, c);
+		}
+		printf("\n");
+	}
+}
+
+void flecha(int n, char c)
+{
+	int espacios = 0;
+	for (int i = 0; i < n * 2; i++)
+	{
+		for (int j = 0; j < n; j++)
+		{
+			linea(espacios, ' ');
+			linea(n, c);
+			if (j == 0)
+			{
+				espacios = 0;
+				espacios += n;
+			}
+		}
+		printf("\n");
+		espacios = 0;
+		if (i < n - 1)
+		{
+			espacios += i + 1;
+		}
+		else {
+			espacios += n - (i - (n - 2));
+		}
+	}
+}
