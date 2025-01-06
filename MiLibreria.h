@@ -4,6 +4,12 @@
 #include <stdlib.h>
 #include <conio.h>
 #include <stdio.h>
+#include <windows.h>
+
+void cambiarColor(int n)
+{
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), n);
+}
 
 int leerEntero(const char *msj)
 {

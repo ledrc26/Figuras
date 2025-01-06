@@ -12,10 +12,11 @@ void rombo(int n, char c);
 void escalera(int n, char c);
 void cruz(int n, char c);
 void flecha(int n, char c);
+void arbolDeNavidad(int n, char c);
 
 int n, fig;
 char c;
-const char menu[12][35] =
+const char menu[13][35] =
 {
 	"Linea",
 	"Cuadrado",
@@ -28,7 +29,8 @@ const char menu[12][35] =
 	"Rombo",
 	"Escalera",
 	"Cruz",
-	"Flecha"
+	"Flecha",
+	"Arbol de navidad"
 }; 
 
 int main()
@@ -77,6 +79,9 @@ int main()
 		break;
 	case 12:
 		flecha(n, c);
+		break;
+	case 13:
+		arbolDeNavidad(n, c);
 		break;
 	default:
 		printf("Opcion no valida");
@@ -241,4 +246,30 @@ void flecha(int n, char c)
 			espacios += n - (i - (n - 2));
 		}
 	}
+}
+
+void arbolDeNavidad(int n, char c)
+{
+	int colores[] = { 1, 3, 4, 5, 14, 15 };
+	for (int i = 0; i < n; i++)
+	{
+		linea(n - i, ' ');
+		for (int j = 0; j < i * 2 + 1; j++)
+		{
+			if (rand() % 100 < 50)
+			{
+				cambiarColor(2);
+			}
+			else
+			{
+				cambiarColor(colores[rand() % 6]);
+			}
+			linea(1, c);
+		}
+		printf("\n");
+	}
+	cambiarColor( 6);
+	linea(n, ' ');
+	linea(1, c);
+	cambiarColor(15);
 }

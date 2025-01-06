@@ -1,53 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\YaPasados\\Giguras\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{10D11669-79DA-423C-8C3B-9FB92746BA25}|Giguras.vcxproj|D:\\YaPasados\\Giguras\\Figuras.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{10D11669-79DA-423C-8C3B-9FB92746BA25}|Giguras.vcxproj|solutionrelative:Figuras.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10D11669-79DA-423C-8C3B-9FB92746BA25}|Giguras.vcxproj|D:\\YaPasados\\Giguras\\MiLibreria.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{10D11669-79DA-423C-8C3B-9FB92746BA25}|Giguras.vcxproj|solutionrelative:MiLibreria.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 1,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MiLibreria.h",
-              "DocumentMoniker": "D:\\YaPasados\\Giguras\\MiLibreria.h",
-              "RelativeDocumentMoniker": "MiLibreria.h",
-              "ToolTip": "D:\\YaPasados\\Giguras\\MiLibreria.h",
-              "RelativeToolTip": "MiLibreria.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-02T04:34:35.346Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Figuras.cpp",
-              "DocumentMoniker": "D:\\YaPasados\\Giguras\\Figuras.cpp",
-              "RelativeDocumentMoniker": "Figuras.cpp",
-              "ToolTip": "D:\\YaPasados\\Giguras\\Figuras.cpp",
-              "RelativeToolTip": "Figuras.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-02T04:33:49.312Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }
